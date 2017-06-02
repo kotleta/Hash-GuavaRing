@@ -1,0 +1,10 @@
+Changes
+GuavaRing.xs
+Makefile.PL
+MANIFEST
+ppport.h
+README
+t/Hash-GuavaRing.t
+fallback/const-c.inc
+fallback/const-xs.inc
+lib/Hash/GuavaRing.pm
