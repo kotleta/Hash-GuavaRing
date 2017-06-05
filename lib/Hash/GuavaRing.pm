@@ -23,8 +23,8 @@ Hash::GuavaRing - Perl extension for guava-hash
 
   my $ring = Hash::GuavaRing->new(
     nodes => [
-      node0hashref,
-      node1hashref,
+      $node0,
+      $node1,
     ]
   );
 
