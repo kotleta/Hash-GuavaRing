@@ -46,7 +46,7 @@ typedef struct {
 
 MODULE = Hash::GuavaRing		PACKAGE = Hash::GuavaRing
 
-void new(...)
+void new(SV *)
 	PPCODE:
 		if (items < 1) croak("Usage: %s->new(...)",SvPV_nolen(ST(0)));
 		GuavaRing * self = (GuavaRing *) safemalloc( sizeof(GuavaRing) );
@@ -84,7 +84,7 @@ void new(...)
 
 		XSRETURN(1);
 
-void DESTROY(SV *this)
+void DESTROY(SV *)
 	PPCODE:
 		register GuavaRing *self = ( GuavaRing * ) SvUV( SvRV( ST(0) ) );
 		if (self->nodes) SvREFCNT_dec(self->nodes);
@@ -95,7 +95,7 @@ void DESTROY(SV *this)
 		safefree(self);
 		XSRETURN_UNDEF;
 
-void get (SV *this, SV * key)
+void get (SV *, SV * key)
 	PPCODE:
 		register GuavaRing *self = ( GuavaRing * ) SvUV( SvRV( ST(0) ) );
 		int idx = guava( SvIV(key), av_len(self->nodes) );

@@ -1,6 +1,6 @@
 package Hash::GuavaRing;
 
-use 5.016003;
+use 5.010;
 use strict;
 use warnings;
 
