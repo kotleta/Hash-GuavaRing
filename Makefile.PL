@@ -11,6 +11,7 @@ WriteMakefile(
 	LIBS              => [''], # e.g., '-lm'
 	DEFINE            => '-Wall -Wno-shift-count-overflow -Wno-constant-conversion', # e.g., '-DHAVE_SOMETHING'
 	INC               => '-I.', # e.g., '-I. -I/usr/include/other'
+	LICENSE           => 'perl_5',
 	# Un-comment this if you add C files to link with later:
 	# OBJECT            => '$(O_FILES)', # link all the C files too
 );

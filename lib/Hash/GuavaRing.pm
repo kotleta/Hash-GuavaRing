@@ -15,7 +15,7 @@ __END__
 
 =head1 NAME
 
-Hash::GuavaRing - Perl extension for guava-hash
+Hash::GuavaRing - Consistent ring hashing using guava hash
 
 =head1 SYNOPSIS
 
@@ -46,7 +46,7 @@ Sveta Kotleta <sveta@svetakotleta.ru>
 
 Mons Anderson <mons@cpan.org>
 
-=head1 COPYRIGHT AND LICENSE
+=head1 LICENSE
 
 Copyright (C) 2017 by Sveta Kotleta
 
