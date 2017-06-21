@@ -46,7 +46,7 @@ typedef struct {
 
 MODULE = Hash::GuavaRing		PACKAGE = Hash::GuavaRing
 
-void new(SV *)
+void new(...)
 	PPCODE:
 		if (items < 1) croak("Usage: %s->new(...)",SvPV_nolen(ST(0)));
 		GuavaRing * self = (GuavaRing *) safemalloc( sizeof(GuavaRing) );
@@ -73,10 +73,7 @@ void new(SV *)
 				croak("Uknown option '%s'", SvPV_nolen(ST(i)));
 			}
 		}
-		// self->nodes = safemalloc( (1+av_len(nodes)) * sizeof( nodes[0] ) );
-		// if (unlikely(!self->nodes)) croak("Failed to allocate memory");
 		self->nodes = newAV();
-
 		for ( i = 0; i <= av_len(nodes); i++ ) {
 			key = av_fetch( nodes, i, 0 );
 			av_store(self->nodes, i, SvREFCNT_inc(*key));
@@ -98,7 +95,8 @@ void DESTROY(SV *)
 void get (SV *, SV * key)
 	PPCODE:
 		register GuavaRing *self = ( GuavaRing * ) SvUV( SvRV( ST(0) ) );
-		int idx = guava( SvIV(key), av_len(self->nodes) );
+		// fprintf(stderr,"\nav_len(self->nodes) = %i\n",av_len(self->nodes));
+		int idx = guava( SvIV(key), av_len(self->nodes)+1 );
 
 		SV **node = av_fetch(self->nodes, idx, 0);
 
