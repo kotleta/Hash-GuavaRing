@@ -1,4 +1,4 @@
-Name:           perl-Hash-GuavaRing
+Name:           Hash-GuavaRing
 Version:        0.01
 Release:        1%{?dist}
 Summary:        Consistent ring hashing using guava hash
@@ -39,7 +39,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,-)
-%doc Changes LICENSE-Artistic-1.0 META.json perl-Hash-GuavaRing.spec README
+%doc Changes LICENSE-Artistic-1.0 META.json spec/Hash-GuavaRing.spec README
 %{perl_vendorarch}/auto/*
 %{perl_vendorarch}/Hash*
 %{_mandir}/man3/*

@@ -5,25 +5,21 @@ INSTALLATION
 
 To install this module type the following:
 
-   perl Makefile.PL
-   make
-   make test
-   make install
+   	perl Makefile.PL
+   	make
+   	make test
+   	make install
 
-DEPENDENCIES
+To build rpm this module type the following:
 
-This module requires these other modules and libraries:
+	make manifest
+	make dist
+	cp Hash-GuavaRing* ~/rpmbuild/SOURCES/
+	rpmbuild -ba ./spec/Hash-GuavaRing.spec
 
-  blah blah blah
 
 COPYRIGHT AND LICENCE
 
-Put the correct copyright and licence information here.
-
 Copyright (C) 2017 by Sveta Kotleta
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.18.2 or,
-at your option, any later version of Perl 5 you may have available.
-
-
+Artistic License
