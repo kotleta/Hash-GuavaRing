@@ -40,7 +40,7 @@ https://github.com/Mons/guava-hash
 
 =head1 AUTHOR
 
-Sveta Kotleta <sveta@svetakotleta.ru>
+Sveta Kotleta <ktl@cpan.org>
 
 =head1 ACKNOWLEDGEMENTS
 
