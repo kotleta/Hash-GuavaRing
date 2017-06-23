@@ -1,5 +1,5 @@
 Name:           Hash-GuavaRing
-Version:        0.01
+Version:        0.03
 Release:        1%{?dist}
 Summary:        Consistent ring hashing using guava hash
 License:        GPL+ or Artistic
@@ -11,7 +11,7 @@ BuildRequires:  perl(ExtUtils::MakeMaker)
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 
 %description
-Blah blah blah.
+
 
 %prep
 %setup -q -n Hash-GuavaRing-%{version}
